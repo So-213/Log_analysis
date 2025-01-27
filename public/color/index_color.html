@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Colored Matrix</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .color-box {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .container {
+        position: relative; /* 子要素の位置を調整可能にする */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-color: #878181;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        margin: 10px;
+        }
+
+        .grid-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .matrix {
+            display: inline-grid;
+            gap: 2px;
+            background-color: #ddd;
+            padding: 2px;
+        }
+
+        .block {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        .right-group {
+        position: absolute; /* 親要素の右端に配置 */
+        top: 10px; /* 上端からの余白 */
+        right: 10px; /* 右端からの余白 */
+        background-color: #444;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .right-group textarea {
+            width: 100%;
+            resize: none;
+            padding: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .right-group button {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1e90ff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .right-group button:hover {
+            background-color: #1c86ee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="color" id="colorContainer"></div>
+    </div>
+    <div class="grid-container">
+        <div id="matrixContainer" class="matrix"></div>
+    </div>
+    <script src="main_color.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "pe_animation",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "open": "^10.1.0"
+  }
+}
