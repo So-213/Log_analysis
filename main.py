@@ -189,7 +189,7 @@ def main():
 
     if layer_flag != 0:
         traversal_layers = cal_layer_cycle(side,pe_array,cycle_data,target_index)
-        output_path = os.path.join('data', 'traversal_layers.json')
+        output_path = os.path.join('data', 'layers.json')
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(traversal_layers, f, indent=4)
 

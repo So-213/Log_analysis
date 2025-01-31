@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // traversal_layers.jsonを取得
     try {
-        const response = await fetch('../../../data/traversal_layers.json');
+        const response = await fetch('../../../data/layers.json');
         const data = await response.json();
 
         // 特定のlayerの値を抽出して2次元配列に変換
